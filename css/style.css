@@ -93,7 +93,6 @@ header {
         grid-template-columns: .5fr .5fr;
         grid-row-gap: 48px;
         grid-column-gap: 6%;
-        border: 1px solid black;
     }
 
     .footer {
