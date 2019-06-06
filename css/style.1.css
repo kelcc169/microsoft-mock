@@ -3,6 +3,11 @@ html, body {
     text-align: center;
 }
 
+body {
+    display: grid;
+    grid-template: .01fr 2.5fr .05fr / 1fr ;
+}
+
 header {
     height: 49px;
     font-weight: bold;
@@ -10,7 +15,7 @@ header {
 
 main {
     display: grid;
-    grid-template: 1fr 2.5fr 1fr 2.5fr 1fr / 1fr;
+    grid-template: .8fr 2.5fr .8fr 2.5fr .8fr / 1fr;
 }
 
 .nav {
@@ -31,7 +36,6 @@ main {
 .jumbo {
     height: 100%;
     color: whitesmoke;
-    grid-area: "jumbo";
 }
 
 .big {
@@ -48,26 +52,24 @@ main {
 
 /*smaller pictures*/
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 48px;
-    grid-area: "container";
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr;
+    grid-row-gap: 48px;
+    margin: 24px;
 }
 
 .products {
     background-color: cadetblue;
-    margin-top: 48px;
-    height: 300px;
+    min-height: 100%;
     min-width: 90%;
 }
 
 .image {
-    height: 60%;
+    min-height: 60%;
 }
 
 .smalltext {
-    height: 40%;
+    min-height: 40%;
     background-color: deepskyblue
 }
 
@@ -87,7 +89,7 @@ main {
 
 @media screen and (min-width: 540px) {
     main {
-        grid-template: 1fr 1.1fr 1fr 1.1fr 1fr / 1fr;
+        grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr;
     }
 
     .products {
@@ -98,12 +100,11 @@ main {
 
     .container {
         display: grid;  
-        min-height: 600px;
         margin: 48px;
         grid-template-rows: .5fr .5fr;
         grid-template-columns: .5fr .5fr;
         grid-row-gap: 48px;
-        grid-column-gap: 5%;
+        grid-column-gap: 3%;
     }
 
     .footer {
@@ -113,13 +114,16 @@ main {
 }
 
 @media screen and (min-width: 768px) {
+    body {
+        grid-template: .01fr 4.25fr .05fr / 1fr ;
+    }
+
     main {
-        grid-template: 1fr 1.9fr 1fr 1.9fr 1fr / 1fr;
+        grid-template: .9fr 1.5fr .9fr 1.5fr .9fr / 1fr;
     }
 
     .jumbo {
         position: relative;
-        min-height: 475px;
     }
 
     .big {
@@ -150,7 +154,6 @@ main {
     
     .jumbo {
         margin: 0 48px;
-        min-height: 300px;
     }
 
     .products {
@@ -160,7 +163,6 @@ main {
     }
 
     .container {
-        min-height: 300px;
         grid-template-rows: 1fr;
         grid-template-columns: .25fr .25fr .25fr .25fr;
         grid-column-gap: 3%;
