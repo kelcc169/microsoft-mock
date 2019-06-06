@@ -1,0 +1,98 @@
+/*go do the thing to the original size! Woooo!*/
+
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    grid-template-rows: ;
+    grid-template-columns: 1fr;
+}
+
+header {
+    height: 49px;
+}
+
+.jumbo {
+    height: 600px;
+}
+
+.container {
+    display: grid;  
+    min-height: 1200px;
+    margin: 48px;
+    grid-template-rows: .25fr .25fr .25fr .25fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2%;
+}
+
+.big {
+    margin: 0 auto;
+    height: 60%;
+    background-color: darkslategray;
+}
+
+.bigtext {
+    margin: 0 auto;
+    height: 40%;
+    background-color: teal;
+}
+
+.products {
+    background-color: cadetblue;
+    min-height: 300px;
+    width: 100%;
+}
+
+@media screen and (min-width: 540px) {
+    .products {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .container {
+        display: grid;  
+        min-height: 700px;
+        margin: 48px;
+        grid-template-rows: .5fr .5fr;
+        grid-template-columns: .5fr .5fr;
+        grid-row-gap: 48px;
+        grid-column-gap: 6%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .jumbo {
+        position: relative;
+        height: 475px;
+    }
+
+    .big {
+        height: 100%;
+    }
+
+    .bigtext {
+        position: absolute;
+    }
+}
+
+@media screen and (min-width: 1084px) {
+    .jumbo {
+        margin: 0 48px;
+    }
+
+    .products {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .container {
+        display: grid;  
+        min-height: 300px;
+        margin: 48px;
+        grid-template-rows: 1fr;
+        grid-template-columns: .25fr .25fr .25fr .25fr;
+        grid-column-gap: 3%;
+    }
+}
